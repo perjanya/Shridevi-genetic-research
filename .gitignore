@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+*.xlsx
+*.docx
+*.csv
+*.dump
+*.backup
+next-env.d.ts
+Shridevi_Genetics_Dashboard_Codex_Master_Prompt.md
+private/
+playwright-report/
+test-results/

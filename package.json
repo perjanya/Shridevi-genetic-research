@@ -1,0 +1,43 @@
+{
+  "name": "shridevi-research-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . && tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:e2e": "tsx --test tests/browser.e2e.ts",
+    "db:migrate": "node --env-file-if-exists=.env.local --import tsx scripts/setup.ts migrate",
+    "db:admin": "node --env-file-if-exists=.env.local --import tsx scripts/setup.ts admin",
+    "db:import": "node --env-file-if-exists=.env.local --import tsx scripts/setup.ts import"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.468.0",
+    "next": "^16.2.0",
+    "pg": "^8.16.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "saxes": "^6.0.0",
+    "zod": "^4.3.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.15",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "embedded-postgres": "^18.6.0-beta.19",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.2.0",
+    "playwright-core": "^1.65.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
